@@ -1,0 +1,1 @@
+Vault de aprendizajes, obsidian
