@@ -1,0 +1,150 @@
+{
+  "cascadeColors": false,
+  "colorBackground": false,
+  "palette": [
+    {
+      "id": "tcHZEwqHQ1EHgYB_6FKb5",
+      "name": "Hacking",
+      "value": "#0ae2ff"
+    },
+    {
+      "id": "RalXkb87cJGIFx91Bo48G",
+      "name": "Japanese",
+      "value": "#76f4ad"
+    },
+    {
+      "id": "_9ZdeNvsXfVdcdO-1Nq11",
+      "name": "Networking",
+      "value": "#e2f45d"
+    },
+    {
+      "id": "yuWt1TDME00-LkGJOHzCe",
+      "name": "Bash",
+      "value": "#51eaf5"
+    },
+    {
+      "id": "KKHX9jjl2GoD30LXh0fwM",
+      "name": "Coding",
+      "value": "#11e450"
+    },
+    {
+      "id": "UpHrvWFKBI4qJd27k99sv",
+      "name": "Cryptography",
+      "value": "#ff7300"
+    }
+  ],
+  "fileColors": [
+    {
+      "path": "0-Inbox/Permanent/Bug Bounty Hunting aka Researching/Remote Command Execution RCE.md",
+      "color": "tcHZEwqHQ1EHgYB_6FKb5"
+    },
+    {
+      "path": "0-Inbox/Entry/Google Dorking.md",
+      "color": "tcHZEwqHQ1EHgYB_6FKb5"
+    },
+    {
+      "path": "0-Inbox/Permanent/Bug Bounty Hunting aka Researching/Doing Recon.md",
+      "color": "tcHZEwqHQ1EHgYB_6FKb5"
+    },
+    {
+      "path": "3-Resources/JLPT Preparation",
+      "color": "RalXkb87cJGIFx91Bo48G"
+    },
+    {
+      "path": "3-Resources/Japanese For Moockies",
+      "color": "RalXkb87cJGIFx91Bo48G"
+    },
+    {
+      "path": "3-Resources/Profe Messer - CompTIA SY0701",
+      "color": "tcHZEwqHQ1EHgYB_6FKb5"
+    },
+    {
+      "path": "3-Resources/Hacking.md",
+      "color": "tcHZEwqHQ1EHgYB_6FKb5"
+    },
+    {
+      "path": "0-Inbox/Permanent/Bug Bounty Hunting aka Researching/XML External Entity XXE.md",
+      "color": "tcHZEwqHQ1EHgYB_6FKb5"
+    },
+    {
+      "path": "3-Resources/JLPT Preparation/JLPT N1 in 500 days.md",
+      "color": "RalXkb87cJGIFx91Bo48G"
+    },
+    {
+      "path": "0-Inbox/Permanent/Bug Bounty Hunting aka Researching",
+      "color": "tcHZEwqHQ1EHgYB_6FKb5"
+    },
+    {
+      "path": "0-Inbox/Permanent/Bug Bounty Hunting aka Researching/Reverse Proxies.md",
+      "color": "tcHZEwqHQ1EHgYB_6FKb5"
+    },
+    {
+      "path": "0-Inbox/Entry/Understanding XMLs.md",
+      "color": "KKHX9jjl2GoD30LXh0fwM"
+    },
+    {
+      "path": "0-Inbox/Permanent/Bug Bounty Hunting aka Researching/JWT Hacking.md",
+      "color": "tcHZEwqHQ1EHgYB_6FKb5"
+    },
+    {
+      "path": "0-Inbox/Entry/Approaching Login Pages.md",
+      "color": "tcHZEwqHQ1EHgYB_6FKb5"
+    },
+    {
+      "path": "0-Inbox/Permanent/Bug Bounty Hunting aka Researching/Account Takeover ATO.md",
+      "color": "tcHZEwqHQ1EHgYB_6FKb5"
+    },
+    {
+      "path": "0-Inbox/Permanent/Bug Bounty Hunting aka Researching/Web Exploitation Course Part 1 Notes.md",
+      "color": "tcHZEwqHQ1EHgYB_6FKb5"
+    },
+    {
+      "path": "2-Areas/Web App Hacking/Main APP Metholodogy.md",
+      "color": "tcHZEwqHQ1EHgYB_6FKb5"
+    },
+    {
+      "path": "2-Areas/Web App Hacking/API Recon KiteRunner.md",
+      "color": "tcHZEwqHQ1EHgYB_6FKb5"
+    },
+    {
+      "path": "0-Inbox/Literature/Serious Cryptography.md",
+      "color": "UpHrvWFKBI4qJd27k99sv"
+    },
+    {
+      "path": "0-Inbox/Literature/Low Level Cryptogtaphics.md",
+      "color": "UpHrvWFKBI4qJd27k99sv"
+    },
+    {
+      "path": "0-Inbox/Literature/Learning Kali Linux - Second Edition.md",
+      "color": "tcHZEwqHQ1EHgYB_6FKb5"
+    },
+    {
+      "path": "0-Inbox/Entry/XSS WAF Bypasses.md",
+      "color": "tcHZEwqHQ1EHgYB_6FKb5"
+    },
+    {
+      "path": "3-Resources/CCNA",
+      "color": "_9ZdeNvsXfVdcdO-1Nq11"
+    },
+    {
+      "path": "3-Resources/CCNA/Cisco 200-301 Networking.md",
+      "color": "_9ZdeNvsXfVdcdO-1Nq11"
+    },
+    {
+      "path": "2-Areas/Coding/JavaScript Moderno.md",
+      "color": "KKHX9jjl2GoD30LXh0fwM"
+    },
+    {
+      "path": "2-Areas/Coding",
+      "color": "KKHX9jjl2GoD30LXh0fwM"
+    },
+    {
+      "path": "2-Areas/Coding/Typescript.md",
+      "color": "KKHX9jjl2GoD30LXh0fwM"
+    },
+    {
+      "path": "0-Inbox/Permanent/Coding",
+      "color": "KKHX9jjl2GoD30LXh0fwM"
+    }
+  ]
+}

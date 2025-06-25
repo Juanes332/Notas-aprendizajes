@@ -19,7 +19,6 @@ Errores y excepciones: https://docs.python.org/3/tutorial/errors.html
 Clases: https://docs.python.org/3/tutorial/classes.html
 
 
-
 1.3 Biblioteca Estándar
 
 Visión general: https://docs.python.org/3/library/index.html

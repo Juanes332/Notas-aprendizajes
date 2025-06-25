@@ -1,0 +1,52 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "LiSmartphone",
+      "LiComputer",
+      "LiAlignCenterVertical",
+      "LiCable",
+      "🖥"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "native",
+    "debugMode": false,
+    "useInternalPlugins": false
+  },
+  "3-Resources/Japanese For Moockies": "🎎",
+  "3-Resources/Profe Messer - CompTIA SY0701": "🐣",
+  "0-Inbox/Entry": "📥",
+  "0-Inbox/Literature": "📕",
+  "0-Inbox/Permanent": "🗽",
+  "0-Inbox/Projects": "🐖",
+  "3-Resources/Libros - Books": "LiLibrary",
+  "2-Areas/Reverse Engineering": "🔍",
+  "2-Areas/Web App Hacking": "🖥",
+  "3-Resources/JLPT Preparation": "💴",
+  "0-Inbox/Permanent/Bug Bounty Hunting aka Researching": "🐞",
+  "3-Resources/CCNA": "LiCable",
+  "2-Areas/Coding": "LiAlignCenterVertical",
+  "0-Inbox/Permanent/Offsec": "LiComputer",
+  "2-Areas/Android Hacking": "LiSmartphone"
+}
