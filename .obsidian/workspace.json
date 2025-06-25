@@ -11,14 +11,14 @@
             "id": "f891c672c0aab43f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "English/English Roadmap.md",
-                "mode": "source",
-                "source": false
+                "aFile": ".obsidian/plugins/obsidian-git/obsidian_askpass.sh",
+                "bFile": ".obsidian/plugins/obsidian-git/obsidian_askpass.sh",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "English Roadmap"
+              "icon": "diff",
+              "title": "Diff: obsidian_askpass.sh"
             }
           }
         ]
@@ -219,10 +219,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f891c672c0aab43f",
+  "active": "256aea93267a8dbd",
   "lastOpenFiles": [
-    "linux/System access and file system.md",
+    "C/Intro to C.md",
     "English/English Roadmap.md",
+    "linux/System access and file system.md",
     "English",
     "linux",
     "Data engineering/Data Engineering on AWS.md",
@@ -233,7 +234,6 @@
     "js_world",
     "python/Fluent python.md",
     "Untitled.canvas",
-    "C/Intro to C.md",
     "Roadmaps/Roadmap_Python_tryhard.md",
     "Roadmaps/Roadmap_Python.md",
     "Pasted image 20250614124452.png",

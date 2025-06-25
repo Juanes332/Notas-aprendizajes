@@ -10,9 +10,9 @@ tags:
 ---
 ---
 
-Introduccion a C
+Introducción a C
 
-Para correr codigo C debemos tener instalado gcc en nuestro sistema linux (si estas en windows tienes que seguir esta documentacion: https://code.visualstudio.com/docs/languages/cpp .  O correrlo con visual studio)
+Para correr código C debemos tener instalado gcc en nuestro sistema linux (si estas en windows tienes que seguir esta documentación: https://code.visualstudio.com/docs/languages/cpp .  O correrlo con visual studio)
 
 ## Semana 1
 
@@ -220,4 +220,203 @@ Imagínate que tienes una playlist de música:
 ---
 
 
-## Part 2: From Python to C - The Rosetta Stone Lecture
+## Part 2: Cositas basicas uwu
+
+**Variables**
+
+```C
+#include <stdio.h>
+#include <stdbool.h> // for work with booleans
+
+int main()
+{
+  // variable = A reusable container for a value
+  //            Behaves as if it were value it conains
+
+  int age = 24;
+  int year = 2025;
+  int quantity = 4;
+
+  printf("You are %d years old\n", age);
+  printf("This year is %d\n", year);
+  printf("They are %d bottles of water xddddd\n", quantity);
+
+  // Floats
+  
+  float price = 13.1342;
+  float game_score = 65.2;
+  float celsius = 35.4;
+
+  printf("The price of thi product is %.4f\n", price);
+  printf("Your score is %.1f\n", game_score);
+  printf("The temperature is %.1f\n", celsius);
+
+  // doubles
+
+  double pi = 3.14158265358979;
+
+  printf("The value of pi is %.15ls", pi); // ls means long floating number
+
+
+  // char
+  
+  char grade = 'F';
+  char symbol = '!';
+  char currnecy = '$';
+
+  printf("Your grade is %c\n", grade);
+  printf("Your favorite symbol is %c\n");
+  printf("Your currency is %c\n", currency);
+
+
+  // Los strings en C no existen, existen los arreglos de caracteres
+  
+  char favorite_game[] = "Persona 5";
+  printf("My favorite game is %s\n", favorite_game);
+
+
+  // booleans -> true = 1, false = 0
+
+  bool is_online = true;
+
+  printf("%d\n", is_online);// 1
+
+  // Basic example with booleans
+
+  if (is_online) {
+    printf("You're ONLINE\n");
+  }
+  else {
+    printf("You're offline\n");
+  }
+
+  // int = whole numbers (4 bytes in modern systems)
+  // float = single-precision decimal numbrer (4 bytes)
+  // double = double-precision decimal number (8 bytes)
+  // char = single character (1 byte)
+  // char[] = array of characters (size varies and is basically the strings of C)
+  // bool = true or false (1 byte, requires <stdbool.h>)
+
+  return 0;
+}
+```
+
+**Format specifier**
+
+```C
+#include <stdio.h>
+
+int main()
+{
+
+  // Format specifier = Special tokens that begin with a %
+, // symbol, followed by a character that specifies the 
+  // data type and optional modifiers (width, precision, flags).
+  // They control how darta is displayed or interpreted 
+
+  int age = 21;
+  float price = 20.99;
+  double pi = 3.14158265358979; 
+  char currency = '$';
+  char name_game[] = "TOTKT";
+
+  printf("%d\n", age);
+  printf("%f\n", price);
+  printf("%lf\n", pi);
+  printf("%c\n", currency);
+  printf("%s\n", name_game);
+
+  // width
+
+  int num1 = 5;
+  int num2 = 45;
+  int num3 = -433;
+
+  printf("%5d\n");
+  printf("%0d\n");
+  printf("%+d\n");
+
+  // precision
+
+  float price1 = 19.99;
+  float price2 = 1.50;
+  float price3 = -100.00;
+
+  printf("%.1f\n", price1); // digitos despues del punto flotante
+  printf("%.2f\n", price2);
+  printf("%.2f\n", price3);
+
+  return 0;
+}
+
+```
+
+**Arithmetic Operators**
+
+```C
+#include <stdio.h>
+
+int main()
+{
+
+  // arithmetic operators = + - * / % ++ --
+
+  int x = 10;
+  int y = 3;
+
+  printf("%d\n", x + y);
+  printf("%d\n", x - y);
+  printf("%d\n", x * y);
+  printf("%d\n", x / y);
+  printf("%d\n", x % y);
+  printf("%d\n", x ++ y);
+  printf("%d\n", x -- y);
+
+  // x = x + 2; its the same for x+=2;
+  // x-=2;
+  // x*=2;
+  // x%=2;
+
+  return 0
+}
+
+```
+
+**User input**
+
+```C
+#include <stdio.h>
+
+int main(){
+  
+  int age = 0;
+  float salary = 0.0f;
+  char currency = '\0';
+  char full_name[30] = "";
+
+  printf("Enter your age: ");
+  scanf("%d", &age);
+
+  printf("Enter your salary: ");
+  scanf("%f", &salary);
+
+  printf("Enter your currency: ");
+  scanf(" %c", &currency); // el espacio de %c es para realizar a limpieza del buffer
+
+  printf("Enter your full name: ");
+  fgets(full_name, sizeof(full_name), stdin);
+
+  printf("%d\n", age);
+  printf("%f\n", salary);
+  printf("%c\n", currency);
+  printf("%s\n", full_name);
+
+
+  return 0;
+}
+
+```
+
+
+
+
