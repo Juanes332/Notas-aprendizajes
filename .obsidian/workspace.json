@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a7252f3c272900f5",
+        "id": "5c3d023cfa34e030",
         "type": "tabs",
         "children": [
           {
-            "id": "f891c672c0aab43f",
+            "id": "037adcef563a736b",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": ".obsidian/plugins/obsidian-git/obsidian_askpass.sh",
-                "bFile": ".obsidian/plugins/obsidian-git/obsidian_askpass.sh",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: obsidian_askpass.sh"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
