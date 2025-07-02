@@ -1,6 +1,7 @@
 {
-  "cssTheme": "Obsidianite",
+  "cssTheme": "Obsidian gruvbox",
   "enabledCssSnippets": [
     "center-images"
-  ]
+  ],
+  "theme": "obsidian"
 }

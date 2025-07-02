@@ -11,10 +11,14 @@
             "id": "037adcef563a736b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Offsec/02 Information Gathering.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "02 Information Gathering"
             }
           }
         ]
@@ -215,8 +219,23 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "256aea93267a8dbd",
+  "active": "037adcef563a736b",
   "lastOpenFiles": [
+    "Pasted image 20250702134146.png",
+    "Pasted image 20250702134131.png",
+    "Pasted image 20250702133457.png",
+    "Pasted image 20250702132308.png",
+    "Pasted image 20250702132138.png",
+    "Pasted image 20250702131931.png",
+    "Pasted image 20250702131511.png",
+    "Pasted image 20250702130659.png",
+    "Pasted image 20250702130424.png",
+    "Pasted image 20250702130417.png",
+    "Pasted image 20250702125323.png",
+    "Offsec/01 Report Writing for Penetration Testers.md",
+    "202506102102.md",
+    "Untitled.md",
+    "Offsec/02 Information Gathering.md",
     "C/Intro to C.md",
     "English/English Roadmap.md",
     "linux/System access and file system.md",
@@ -224,25 +243,13 @@
     "linux",
     "Data engineering/Data Engineering on AWS.md",
     "js_world/js/Foundations js.md",
-    "Pasted image 20250429150317.png",
-    "Untitled.md",
     "js_world/js",
     "js_world",
     "python/Fluent python.md",
     "Untitled.canvas",
     "Roadmaps/Roadmap_Python_tryhard.md",
     "Roadmaps/Roadmap_Python.md",
-    "Pasted image 20250614124452.png",
-    "Pasted image 20250614124241.png",
-    "Pasted image 20250614120648.png",
-    "Pasted image 20250614120602.png",
-    "Pasted image 20250614120549.png",
-    "Pasted image 20250614120530.png",
-    "Pasted image 20250614120454.png",
-    "Pasted image 20250614120303.png",
-    "Pasted image 20250614120257.png",
     "Data engineering",
-    "Offsec/Information Gathering.md",
     "0-Inbox/Permanent/Offsec/Report Writing for Penetration Testers.md",
     "0-Inbox/Permanent/Bug Bounty Hunting aka Researching/Account Takeover ATO.md",
     "0-Inbox/Entry/React JS.md",
@@ -260,9 +267,6 @@
     "0-Inbox/Permanent/Bug Bounty Hunting aka Researching/Remote Command Execution RCE.md",
     "0-Inbox/Permanent/Bug Bounty Hunting aka Researching/JWT Hacking.md",
     "0-Inbox/Permanent/Bug Bounty Hunting aka Researching/Doing Recon.md",
-    "2-Areas/Web App Hacking/API Recon KiteRunner.md",
-    "3-Resources/CCNA/Cisco 200-301 Networking.md",
-    "0-Inbox/Entry/XSS WAF Bypasses.md",
-    "0-Inbox/Literature/Low Level Cryptogtaphics.md"
+    "2-Areas/Web App Hacking/API Recon KiteRunner.md"
   ]
 }
