@@ -43,7 +43,6 @@ whoami
 
 ---
 
-
 ## Como changos puedo cambiar una password?
 
 - Se debe cambiar una password cuando te logueas por primera vez en un sistema, este principio se usa normalmente cuando los sysadmin te dan un una password básica por primera vez
