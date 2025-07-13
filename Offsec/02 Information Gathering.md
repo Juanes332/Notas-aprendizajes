@@ -198,9 +198,9 @@ Additionally, changes such as onboarding new employees, introducing new products
 
 ## 1. Whois Enumeration
 
-[_Whois_](https://www.domaintools.com/support/what-is-whois-information-and-why-is-it-valuable/) is a TCP service, tool, and type of database that can provide information about a domain name, such as the [_name server_](https://www.forbes.com/advisor/business/software/what-is-a-name-server/) and [_registrar_](https://www.cloudflare.com/learning/dns/glossary/what-is-a-domain-name-registrar/). This information is often public, since registrars charge a fee for private registration.
+[_Whois_](https://www.domaintools.com/support/what-is-whois-information-and-why-is-it-valuable/) es un servicio, herramienta y tipo de base de datos TCP que puede proporcionar información sobre un nombre de dominio, como el [_name server_](https://www.forbes.com/advisor/business/software/what-is-a-name-server/) y [_registrar_](https://www.cloudflare.com/learning/dns/glossary/what-is-a-domain-name-registrar/). Esta información suele ser pública, ya que los registradores cobran una tarifa por el registro privado.
 
-We can gather basic information about a domain name by executing a standard forward search and passing the domain name, **megacorpone.com**, into `whois`, providing the IP address of our Ubuntu WHOIS server as an argument of the host (`-h`) parameter
+Podemos recopilar información básica sobre un nombre de dominio ejecutando una búsqueda estándar hacia adelante y pasando el nombre de dominio, **megacorpone.com**, usando`whois`, Proporcionar la dirección IP de nuestro servidor WHOIS de Ubuntu como argumento del host  y el parametro (`-h`)
 
 ``` bash
 kali@kali:~$ whois megacorpone.com -h 192.168.50.251
