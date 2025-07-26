@@ -1,196 +1,110 @@
+---
+id: 2025061201
+tags:
+  - Cibersecurity
+  - Offsec
+  - Linux
+  - Commands
+  - Console
+  - español
+type: permanent
+author: Offsec
+---
 
-Intro:
+### Introducción
 
-The goal of a penetration test (or pentest) is to detect security gaps to improve the defenses of the client organization. Because the network, devices, and software within the company's environment change over time, penetration testing is a cyclic activity. A company's attack surface changes periodically due to newly-discovered software vulnerabilities, configuration mistakes from internal activities, or IT restructuring that might expose new segments for targeting.
+El propósito de un **pentest (prueba de penetración)** es identificar brechas de seguridad para fortalecer la defensa de una organización. Dado que redes, dispositivos y software cambian con el tiempo, el pentesting es una **actividad cíclica**, ya que:
 
-Additionally, changes such as onboarding new employees, introducing new products, deploying new machines, expanding infrastructure, or launching websites can further broaden the attack surface, necessitating regular reassessments.
-
-
-## The Penetration Testing Lifecycle
-
-**Learning Objectives:**
-
-- Understand the stages of a penetration test
-    
-- Learn the role of information gathering in each stage
-    
-- Differentiate between active and passive information gathering
-    
-
-**Penetration Test Stages:**
-
-1. **Defining the Scope** – Identify what is in and out of scope (e.g., IP ranges, systems).
-    
-2. **Information Gathering** – Collect data about the target using passive and active methods.
-    
-3. **Vulnerability Detection** – Identify weaknesses.
-    
-4. **Initial Foothold** – Gain access to the target.
-    
-5. **Privilege Escalation** – Increase access level.
-    
-6. **Lateral Movement** – Move through the network to other systems.
-    
-7. **Reporting/Analysis** – Document findings and results.
-    
-8. **Lessons Learned/Remediation** – Review and suggest fixes.
-    
-
-**Key Points on Scoping:**
-
-- Scope defines what can and cannot be tested.
-    
-- Must be agreed upon before testing starts.
-    
-
-**Information Gathering:**
-
-- Begins after scoping.
-    
-- Objective: collect detailed info on the target (infrastructure, assets, personnel).
-    
-- **Passive Reconnaissance:** No direct interaction (e.g., WHOIS, social media, DNS queries).
-    
-- **Active Reconnaissance:** Direct probing of the target (e.g., port scanning).
-    
-- Passive = lower risk of detection; Active = higher visibility.
-    
-- Enumeration continues throughout the test (not just at the beginning).
-    
-
-**Takeaway:**
-
-- Information gathering is continuous and critical to discovering the full attack surface.
-    
-- The balance between passive and active methods depends on stealth requirements and objectives.
+- Nuevas vulnerabilidades aparecen constantemente
+- Errores de configuración y cambios en infraestructura amplían la **superficie de ataque**
+- Actividades como contratar personal, lanzar productos o sitios web también exigen reevaluaciones periódicas
 
 ---
 
-## Passive Information Gathering
+### Ciclo de vida del pentest
 
-**Learning Objectives:**
+**Fases principales:**
 
-- Understand the two approaches to passive information gathering
-    
-- Learn about Open-Source Intelligence (OSINT)
-    
-- Understand web server and DNS passive information gathering
-    
+1. **Definición del alcance:** delimita qué sistemas serán evaluados.
+2. **Reconocimiento:** recolección de información (pasiva y activa).
+3. **Detección de vulnerabilidades:** identificación de debilidades.
+4. **Acceso inicial:** entrada al sistema objetivo.
+5. **Escalada de privilegios:** obtención de mayores permisos.
+6. **Movimiento lateral:** exploración de otros sistemas en la red.
+7. **Reporte y análisis:** documentación de hallazgos.
+8. **Lecciones aprendidas/remediación:** sugerencias de mejora.
 
+**Reconocimiento:**
 
-### **What is Passive Information Gathering?**
+- Se realiza después de definir el alcance.
+- **Pasivo:** sin interacción directa (WHOIS, redes sociales, DNS).
+- **Activo:** interactúa con el objetivo (escaneo de puertos).
+- Es **continuo** durante toda la prueba, no solo al inicio.
 
-- Also known as **OSINT (Open-Source Intelligence)**
-    
-- Involves collecting publicly available information **without alerting the target**
-    
-- Goal: maintain a **low footprint** while identifying useful data to assist later attack stages (e.g., phishing, password guessing)
-    
+---
 
+### Recolección pasiva de información (Passive Recon / OSINT)
 
-### **Two Interpretations of "Passive":**
+**Objetivo:** obtener información pública sin alertar al objetivo, útil para fases posteriores como phishing o fuerza bruta.
 
-1. **Strict Passive Gathering:**
-    
-    - **No direct contact** with the target's systems
-        
-    - Uses **third-party sources** only (e.g., search engines, public records)
-        
-    - Maximizes stealth but may limit information
-        
-2. **Loose Passive Gathering:**
-    
-    - May interact with the target like a **regular user**
-        
-    - Examples: viewing websites, creating an account, reading public posts
-        
-    - Still avoids **scanning, probing**, or testing for vulnerabilities
-        
+**Dos enfoques:**
 
-✅ _This module adopts the looser interpretation._
+1. **Pasivo estricto:** solo fuentes externas, sin interacción directa (máxima discreción).
+2. **Pasivo laxo:** se interactúa como usuario legítimo (e.g., navegar el sitio, registrarse), pero sin escanear o atacar.
 
+Este módulo adopta el enfoque **laxo**.
 
-### **Nature of Passive Recon:**
+**Características:**
 
-- **Cyclical**, not linear — findings lead to new techniques or searches
-    
-- **Flexible and creative** process
-    
-- Each tool/resource can reveal new data points that open other pathways
-    
+- Es un proceso **cíclico y creativo**
+- Nuevos hallazgos pueden abrir nuevas líneas de investigación
 
+**Objetivos del reconocimiento pasivo:**
 
-### **Main Goals of Passive Recon:**
+- Ampliar superficie de ataque
+- Apoyar ataques sociales (phishing)
+- Facilitar ataques de credenciales
+- Identificar correos, teléfonos, sistemas internos, tecnologías, políticas y comportamiento de empleados
 
-- **Expand the attack surface**
-    
-- Support **social engineering** (e.g., phishing)
-    
-- Enable **credential guessing/brute force** attacks
-    
-- Identify:
-    
-    - Email addresses
-        
-    - Phone numbers
-        
-    - Internal systems
-        
-    - Employee behavior
-        
-    - Company policies or technology stack
-        
+---
 
+### Ejemplo real: éxito con OSINT
 
-### **Real-World Example: OffSec Passive Recon Success Story**
+**Escenario:** Empresa pequeña, pocos servicios expuestos y seguros.
 
-**Target:** Small company with minimal online footprint
+**Descubrimiento:**
 
-- Few exposed services, all secure — traditional probing yielded no results
-    
-- Using **Google dorking** and public forums, discovered a post by an employee ("David") using their **corporate email** and **personal phone** on a **stamp collecting forum**
-    
+- Empleado llamado _David_ publicó en un foro usando su correo corporativo y número personal.
 
-**Steps Taken:**
+**Explotación:**
 
-1. Registered a **fake stamp-trading domain**
-    
-2. Created a **believable stamp site** (Google Images)
-    
-3. Embedded **client-side exploit code**
-    
-4. Called "David" pretending to be a fellow collector
-    
-5. "David" visited the site from his work machine
-    
-6. Exploit delivered a **reverse shell** to the team
-    
+1. Se creó un dominio falso de coleccionismo de estampillas.
+2. Se construyó un sitio con imágenes realistas.
+3. Se insertó código malicioso.
+4. Se llamó a _David_ haciéndose pasar por otro coleccionista.
+5. Visitó el sitio desde su máquina laboral.
+6. El exploit otorgó una **shell inversa** al equipo.
 
-**Key Takeaways:**
+**Conclusiones:**
 
-- Minor public info (like forum posts) can lead to **serious compromise**
-    
-- **Security awareness** and **company policies** are as important as technical defenses
-    
-- Penetration testers **avoid blaming individuals**; the goal is to improve **system-wide security**
-    
+- Información menor y pública puede generar compromiso total.
+- La **conciencia de seguridad** y las políticas organizacionales son tan importantes como la protección técnica.
+- El objetivo del pentest no es culpar a individuos, sino fortalecer la seguridad global.
 
+---
 
-### **Ethical Considerations:**
+### Consideraciones éticas
 
-- Always follow the **rules of engagement**
-    
-- Avoid targeting specific employees in reports
-    
-- Focus on improving the **organization’s security posture**, not blaming people
-    
+- Respetar siempre las **reglas de compromiso**
+- Evitar señalar empleados en los informes
+- Enfocar el análisis en **mejorar la postura de seguridad**, no en culpar personas
 
+---
 
-### **Next Steps:**
+### Próximos pasos
 
-- Study popular OSINT tools and techniques
-    
-- Apply them in a simulated campaign against **MegaCorp One** (fictional company)
+- Estudiar herramientas y técnicas populares de OSINT
+- Practicar en un entorno simulado como **MegaCorp One**
 
 
 ---
@@ -709,7 +623,7 @@ dnsrecon -d megacorpone.com -t std
 
 ```
 
-También podemos combinarlo con el archivo que creamos para realizar un ataque dns
+También podemos combinarlo con el archivo que creamos para realizar un ataque dns de fuerza bruta.
 
 ```bash
 dnsrecon -d megacorpone.com -D ~/list.txt -t brt

@@ -53,6 +53,3 @@ When we want export the workflow and selling, we only need download the workflow
 ![[Pasted image 20250429155002.png]]
  
 The schedule trigger only works if the switch button is in active and not in inactive.
-
-
-## Connect  google sheets with n8n

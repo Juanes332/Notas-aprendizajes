@@ -1,3 +1,15 @@
+---
+id: 2025051001
+tags:
+  - Linux
+  - Offsec
+  - Cibersecurity
+  - español
+  - Console
+  - Commands
+type: permanent
+author: juan
+---
 
 ## 1. Reconocimiento **pasivo** (OSINT)
 

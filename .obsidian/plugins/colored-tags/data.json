@@ -91,7 +91,11 @@
     "n8n": 79,
     "C": 80,
     "data": 81,
-    "English": 82
+    "English": 82,
+    "Offsec": 83,
+    "Cibersecurity": 84,
+    "Commands": 85,
+    "es": 86
   },
   "_version": 3
 }

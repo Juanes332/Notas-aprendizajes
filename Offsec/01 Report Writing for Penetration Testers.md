@@ -1,3 +1,13 @@
+---
+id: 2025041001
+tags:
+  - Linux
+  - Offsec
+  - English
+  - Cibersecurity
+author: Offsec
+type: permanent
+---
 
 ## 1. Understanding Note-Taking
 
