@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "web dev/html&css/HTML.md",
+                "file": "Offsec/01 Report Writing for Penetration Testers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HTML"
+              "title": "01 Report Writing for Penetration Testers"
             }
           }
         ]
@@ -221,8 +221,20 @@
   },
   "active": "afe0022ff7f031af",
   "lastOpenFiles": [
-    "advanced_python/Intro to POO.md",
+    "Offsec/04 Introduction to Web Application Attacks.md",
+    "Pasted image 20250728165647.png",
+    "Pasted image 20250728165621.png",
+    "Pasted image 20250728165522.png",
+    "Pasted image 20250728165243.png",
+    "Pasted image 20250728165135.png",
+    "Pasted image 20250728164924.png",
+    "Pasted image 20250728164441.png",
+    "Pasted image 20250728164402.png",
+    "Pasted image 20250728164115.png",
+    "Pasted image 20250728163928.png",
+    "Offsec/03 Vulnerability Scanning.md",
     "web dev/html&css/HTML.md",
+    "advanced_python/Intro to POO.md",
     "web dev/html&css",
     "web dev",
     "linux/03 System administration.md",
@@ -244,17 +256,6 @@
     "Offsec/01 Report Writing for Penetration Testers.md",
     "Offsec/02 - OSINT Commands.md",
     "Offsec/02 Information Gathering.md",
-    "Offsec/03 Vulnerability Scanning.md",
-    "Pasted image 20250429150317.png",
-    "Pasted image 20250722131151.png",
-    "Pasted image 20250722121101.png",
-    "Pasted image 20250722120239.png",
-    "Pasted image 20250722120218.png",
-    "Pasted image 20250722114540.png",
-    "Pasted image 20250722114519.png",
-    "Pasted image 20250722114451.png",
-    "Pasted image 20250722114420.png",
-    "Pasted image 20250722114342.png",
     "Chatbot Conversation - 2025-07-02.md",
     "linux/01_System access and file system.md",
     "202506102102.md",
@@ -264,8 +265,6 @@
     "js_world",
     "Untitled.canvas",
     "Data engineering",
-    "0-Inbox/Permanent/Offsec/Report Writing for Penetration Testers.md",
-    "0-Inbox/Permanent/Bug Bounty Hunting aka Researching/Account Takeover ATO.md",
     "2-Areas/Android Hacking",
     "01-05-00-InstalacionIntelliJ-UJ.pdf"
   ]

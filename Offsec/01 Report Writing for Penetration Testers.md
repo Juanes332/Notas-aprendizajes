@@ -66,14 +66,6 @@ Let's now look at an example of the notes we might take for a web vulnerability 
 Let's get more specific and review an example of testing for a _Cross-Site Scripting_ (XSS) vulnerability. The target we tested has a web page aptly named **XSSBlog.html**. When we navigate to it, we can enter a blog entry
 
 
-![[Pasted image 20250421161803.png]]
-**Figure 1: XSS Testing**
-
-When we read back the blog entry, we get the following alert:
-
-![[Pasted image 20250421161902.png]]
-**Figure 2: XSS Testing Issue**
-
 While making these requests, we keep a record of our actions, as shown below.
 
 ```
@@ -106,7 +98,6 @@ Date Started:   31 March 2022
 
 PoC payload: <script>alert(‘Your computer is infected!')</script>
 ```
-**Listing 1 - Example of a Testing Note.**
 
 
 ## 1.4. Choosing the Right Note-Taking Tool
