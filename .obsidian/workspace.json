@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Offsec/01 Report Writing for Penetration Testers.md",
+                "file": "Offsec/04 Introduction to Web Application Attacks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01 Report Writing for Penetration Testers"
+              "title": "04 Introduction to Web Application Attacks"
             }
           }
         ]
@@ -98,7 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 225.50260543823242
   },
   "right": {
     "id": "8ea9ce2430ed42c3",
@@ -204,7 +204,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 298.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -221,6 +222,7 @@
   },
   "active": "afe0022ff7f031af",
   "lastOpenFiles": [
+    "Offsec/01 Report Writing for Penetration Testers.md",
     "Offsec/04 Introduction to Web Application Attacks.md",
     "Pasted image 20250728165647.png",
     "Pasted image 20250728165621.png",
@@ -253,7 +255,6 @@
     "linux/01 System access and file system.md",
     "n8n/n8n.md",
     "n8n/Important Links.md",
-    "Offsec/01 Report Writing for Penetration Testers.md",
     "Offsec/02 - OSINT Commands.md",
     "Offsec/02 Information Gathering.md",
     "Chatbot Conversation - 2025-07-02.md",

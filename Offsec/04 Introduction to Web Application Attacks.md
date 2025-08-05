@@ -242,7 +242,6 @@ Una vez identificada una aplicación web activa, el siguiente paso es **mapear t
 ### Modos de funcionamiento:
 
 - Gobuster ofrece varios modos, como:
-    
     - **dir**: enumeración de directorios y archivos (enfocado en este módulo)
     - **dns**: descubrimiento de subdominios
     - **fuzz**: pruebas de fuzzing en rutas o parámetros
@@ -252,13 +251,11 @@ Una vez identificada una aplicación web activa, el siguiente paso es **mapear t
 ### Uso básico en modo `dir`:
 
 Parámetros esenciales:
-
 - `-u`: URL o IP del objetivo
 - `-w`: ruta al **wordlist** que contiene posibles nombres de archivos/directorios
 - `-t`: cantidad de hilos (threads). Por defecto usa 10, pero se puede reducir para disminuir el tráfico
 
 **Ejemplo:**
-
 
 ```bash
 gobuster dir -u 192.168.50.20 -w /usr/share/wordlists/dirb/common.txt -t 5
@@ -364,14 +361,12 @@ Un **proxy web** es una solución (software o hardware) que intercepta el tráfi
 - Modificarlas manual o automáticamente
 - Observar el comportamiento del servidor ante datos manipulados
 
-
 ### Proxies avanzados: TLS Inspection
 
 - Algunos entornos corporativos utilizan **dispositivos de inspección TLS**, los cuales:
     - Interceptan el tráfico cifrado HTTPS
     - Lo descifran, analizan y vuelven a cifrar
     - Esto **elimina la privacidad real del canal HTTPS**
-
 
 ### Funcionalidad del Proxy en Burp Suite:
 
@@ -391,10 +386,9 @@ Un **proxy web** es una solución (software o hardware) que intercepta el tráfi
 
 ### Configuración inicial del Proxy:
 
-1. Hacer clic en la pestaña **Proxy** para ver los submenús.    
-2. Ir a la subpestaña **Intercept**.    
+1. Hacer clic en la pestaña **Proxy** para ver los sub menús.    
+2. Ir a la sub pestaña **Intercept**.    
 3. **Desactivar temporalmente el modo Intercept** para navegar sin interrupciones.
-
 
 ### Consejos sobre el uso de Intercept:
 
@@ -404,7 +398,7 @@ Un **proxy web** es una solución (software o hardware) que intercepta el tráfi
 
 ![[Pasted image 20250728163522.png]]
 
-A continuación, podemos revisar la configuración del receptor de proxy. La subpestaña "Options" muestra qué puertos están escuchando las solicitudes de proxy.
+A continuación, podemos revisar la configuración del receptor de proxy. La sub pestaña "Options" muestra qué puertos están escuchando las solicitudes de proxy.
 
 ![[Pasted image 20250728163558.png]]
 
@@ -414,7 +408,7 @@ Por defecto, **Burp Suite activa un proxy listener** en la dirección `localhost
 
 ### Nota sobre el navegador integrado
 
-- Burp ahora incluye su **propio navegador basado en Chromium**, preconfigurado para usar todas sus funciones.
+- Burp ahora incluye su **propio navegador basado en Chromium**, pre configurado para usar todas sus funciones.
 - Sin embargo, en este curso se utilizará **Firefox en Kali Linux**, ya que ofrece una solución **más flexible y modular** para pruebas personalizadas.
 
 ### Configuración de Firefox en Kali:
@@ -638,8 +632,6 @@ Cuando vayamos a _Payloads_ sub-tab, podremos pegar la lista de palabras anterio
 ![[Pasted image 20250728165522.png]]
 
 Una vez configuradas las posiciones y la carga útil (wordlist), se puede proceder a **iniciar el ataque de fuerza bruta** con Burp Suite Intruder.
-
-
 
 ### Iniciar el ataque:
 
