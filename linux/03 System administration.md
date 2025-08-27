@@ -1558,3 +1558,51 @@ quit
 - `cal` muestra calendarios por mes o año, y `bc` es una calculadora dentro del terminal.
     
 - Son esenciales cuando trabajas en **entornos sin interfaz gráfica**, como PuTTY o conexiones SSH.
+
+
+---
+
+## Redimensionamiento de disco
+
+Usamos vgs para revisar cuando espacio tenemos disponible:
+
+```bash
+vgs
+  VG        #PV #LV #SN Attr   VSize    VFree   
+  ubuntu-vg   1   1   0 wz--n- <473.89g <373.89g
+
+```
+
+Con lvextend podemos extender el disco, en mi caso necesito pasarle la option -l para pedirle que tome el 100% del espacio libre para el redimencionamiento
+
+```bash
+lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
+```
+
+Finalmente podemos confirmar el cambio en caliente con resize2fs (para particiones tipo ext4)
+
+```bash
+resize2fs /dev/ubuntu-vg/ubuntu-lv
+```
+
+Validación:
+```bash
+df -Th /
+Filesystem                        Type  Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-ubuntu--lv ext4  466G   93G  354G  21% /
+
+df -h
+Filesystem                         Size  Used Avail Use% Mounted on
+tmpfs                              3.2G  1.8M  3.2G   1% /run
+efivarfs                           192K   93K   95K  50% /sys/firmware/efi/efivars
+/dev/mapper/ubuntu--vg-ubuntu--lv  466G   93G  354G  21% /
+tmpfs                               16G     0   16G   0% /dev/shm
+tmpfs                              5.0M     0  5.0M   0% /run/lock
+/dev/nvme0n1p2                     2.0G  190M  1.6G  11% /boot
+/dev/nvme0n1p1                     1.1G  6.2M  1.1G   1% /boot/efi
+overlay                            466G   93G  354G  21% /var/lib/docker/overlay2/70aa3e67da66d2ee914905cdbaf8c275d977d2a9b6114a17255045cff015a255/merged
+tmpfs                              3.2G   20K  3.2G   1% /run/user/1000
+
+```
+
+

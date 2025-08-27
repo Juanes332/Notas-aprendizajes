@@ -95,7 +95,11 @@
     "Offsec": 83,
     "Cibersecurity": 84,
     "Commands": 85,
-    "es": 86
+    "es": 86,
+    "Algorithms": 87,
+    "Programming": 88,
+    "Python": 89,
+    "JavaScript": 90
   },
   "_version": 3
 }

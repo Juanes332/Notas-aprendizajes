@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Offsec/04 Introduction to Web Application Attacks.md",
+                "file": "Data engineering/Data Engineering on AWS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04 Introduction to Web Application Attacks"
+              "title": "Data Engineering on AWS"
             }
           }
         ]
@@ -163,13 +163,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0-Inbox/Literature/Learning Kali Linux - Second Edition.md",
+                "file": "Data engineering/Data Engineering on AWS.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Learning Kali Linux - Second Edition"
+              "title": "Outline of Data Engineering on AWS"
             }
           },
           {
@@ -204,11 +204,11 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 407.5
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -220,10 +220,20 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "afe0022ff7f031af",
+  "active": "256aea93267a8dbd",
   "lastOpenFiles": [
-    "Offsec/01 Report Writing for Penetration Testers.md",
+    "Python/advanced_python/Intro to POO.md",
+    "Python",
+    "linux/03 System administration.md",
+    "algorithms/Level_easy/02 Algoritmo de subcadena.md",
+    "n8n/n8n.md",
+    "C/Intro to C.md",
+    "algorithms/Level_easy/01 Algoritmo de búsqueda Secuencial.md",
+    "Pasted image 20250805095955.png",
+    "algorithms/Level_easy",
     "Offsec/04 Introduction to Web Application Attacks.md",
+    "algorithms",
+    "Offsec/01 Report Writing for Penetration Testers.md",
     "Pasted image 20250728165647.png",
     "Pasted image 20250728165621.png",
     "Pasted image 20250728165522.png",
@@ -233,14 +243,11 @@
     "Pasted image 20250728164441.png",
     "Pasted image 20250728164402.png",
     "Pasted image 20250728164115.png",
-    "Pasted image 20250728163928.png",
     "Offsec/03 Vulnerability Scanning.md",
     "web dev/html&css/HTML.md",
-    "advanced_python/Intro to POO.md",
     "web dev/html&css",
     "web dev",
-    "linux/03 System administration.md",
-    "advanced_python",
+    "Python/advanced_python",
     "linux/02 Linux fundamentals.md",
     "Untitled.md",
     "Roadmaps/Roadmap_Python_tryhard.md",
@@ -248,25 +255,18 @@
     "Roadmaps/Roadmap_Pentesting.md",
     "English/English Roadmap.md",
     "ArchLinux/Arch config.md",
-    "C/Intro to C.md",
     "Data engineering/Data Engineering on AWS.md",
     "python/Fluent python.md",
     "js_world/js/Foundations js.md",
     "linux/01 System access and file system.md",
-    "n8n/n8n.md",
     "n8n/Important Links.md",
     "Offsec/02 - OSINT Commands.md",
     "Offsec/02 Information Gathering.md",
     "Chatbot Conversation - 2025-07-02.md",
-    "linux/01_System access and file system.md",
-    "202506102102.md",
     "English",
     "linux",
     "js_world/js",
     "js_world",
-    "Untitled.canvas",
-    "Data engineering",
-    "2-Areas/Android Hacking",
-    "01-05-00-InstalacionIntelliJ-UJ.pdf"
+    "Untitled.canvas"
   ]
 }
