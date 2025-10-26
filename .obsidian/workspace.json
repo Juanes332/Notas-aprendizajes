@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TryHackme/Offensive Security Intro.md",
+                "file": "Offsec/04 Introduction to Web Application Attacks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Offensive Security Intro"
+              "title": "04 Introduction to Web Application Attacks"
             }
           }
         ]
@@ -98,7 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.50260543823242
+    "width": 297.5
   },
   "right": {
     "id": "8ea9ce2430ed42c3",
@@ -107,7 +107,7 @@
       {
         "id": "4df95591f9f3f29e",
         "type": "tabs",
-        "dimension": 57.48571428571429,
+        "dimension": 66.01851851851852,
         "children": [
           {
             "id": "bf472cfb472f8666",
@@ -163,35 +163,48 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data engineering/Data Engineering on AWS.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Data Engineering on AWS"
+              "title": "Outline"
             }
           },
           {
-            "id": "256aea93267a8dbd",
+            "id": "5ec3b5983dc950b7",
             "type": "leaf",
             "state": {
-              "type": "git-view",
+              "type": "footnotes",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-file-signature",
+              "title": "Footnotes"
+            }
+          },
+          {
+            "id": "c5dd7011164b14ce",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       },
       {
-        "id": "6a45c4ba3d6fcf5a",
+        "id": "8eab5bd14dd055e7",
         "type": "tabs",
-        "dimension": 42.51428571428571,
+        "dimension": 33.98148148148148,
         "children": [
           {
-            "id": "458f6ee82aa503c7",
+            "id": "cc00a87a62e005e0",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -204,7 +217,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 407.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -215,15 +229,29 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "random-note:Open random note": false,
+      "publish:Publish changes...": false,
+      "workspaces:Manage workspace layouts": false,
+      "zk-prefixer:Create new unique note": false,
       "omnisearch:Omnisearch": false,
       "obsidian-git:Open Git source control": false,
       "templater-obsidian:Templater": false
     }
   },
-  "active": "afe0022ff7f031af",
+  "active": "9993d3f549e8c423",
   "lastOpenFiles": [
-    "Data engineering/Data Engineering on AWS.md",
+    "Offsec/04 Introduction to Web Application Attacks.md",
+    "Offsec/03 Vulnerability Scanning.md",
+    "Offsec/02 Information Gathering.md",
+    "Offsec/02 - OSINT Commands.md",
+    "Offsec/01 Report Writing for Penetration Testers.md",
+    "Cosas_Personales/Dinero.md",
+    "Pasted image 20251025155836.png",
+    "Pasted image 20251025155759.png",
+    "Cosas_Personales",
     "TryHackme/Offensive Security Intro.md",
+    "Data engineering/Data Engineering on AWS.md",
     "TryHackme",
     "Trading",
     "Python/advanced_python/Intro to POO.md",
@@ -235,9 +263,7 @@
     "algorithms/Level_easy/01 Algoritmo de búsqueda Secuencial.md",
     "Pasted image 20250805095955.png",
     "algorithms/Level_easy",
-    "Offsec/04 Introduction to Web Application Attacks.md",
     "algorithms",
-    "Offsec/01 Report Writing for Penetration Testers.md",
     "Pasted image 20250728165647.png",
     "Pasted image 20250728165621.png",
     "Pasted image 20250728165522.png",
@@ -245,9 +271,6 @@
     "Pasted image 20250728165135.png",
     "Pasted image 20250728164924.png",
     "Pasted image 20250728164441.png",
-    "Pasted image 20250728164402.png",
-    "Pasted image 20250728164115.png",
-    "Offsec/03 Vulnerability Scanning.md",
     "web dev/html&css/HTML.md",
     "web dev/html&css",
     "web dev",
@@ -263,11 +286,7 @@
     "js_world/js/Foundations js.md",
     "linux/01 System access and file system.md",
     "n8n/Important Links.md",
-    "Offsec/02 - OSINT Commands.md",
-    "Offsec/02 Information Gathering.md",
-    "Chatbot Conversation - 2025-07-02.md",
     "English",
-    "linux",
     "Untitled.canvas"
   ]
 }

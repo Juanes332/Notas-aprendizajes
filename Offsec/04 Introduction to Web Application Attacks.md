@@ -4,7 +4,6 @@ tags:
   - Cibersecurity
   - Linux
   - Console
-  - English
   - Offsec
 type: permanent
 author: Offsec
