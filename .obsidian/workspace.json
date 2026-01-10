@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "922905330fa27180",
+        "id": "ae934f13369c1970",
         "type": "tabs",
         "children": [
           {
-            "id": "afe0022ff7f031af",
+            "id": "aa3950ebeb1c33ca",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Offsec/04 Introduction to Web Application Attacks.md",
+                "file": "6 - Main Notes/Python/Intro/Intro python.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04 Introduction to Web Application Attacks"
+              "title": "Intro python"
             }
           }
         ]
@@ -54,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "roadmap",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -163,12 +163,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "6 - Main Notes/Python/Intro/Intro python.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Intro python"
             }
           },
           {
@@ -217,8 +218,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 371.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -236,57 +236,58 @@
       "zk-prefixer:Create new unique note": false,
       "omnisearch:Omnisearch": false,
       "obsidian-git:Open Git source control": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "smart-random-note:Open Random Note from Search": false
     }
   },
-  "active": "9993d3f549e8c423",
+  "active": "aa3950ebeb1c33ca",
   "lastOpenFiles": [
-    "Offsec/04 Introduction to Web Application Attacks.md",
-    "Offsec/03 Vulnerability Scanning.md",
-    "Offsec/02 Information Gathering.md",
-    "Offsec/02 - OSINT Commands.md",
-    "Offsec/01 Report Writing for Penetration Testers.md",
-    "Cosas_Personales/Dinero.md",
-    "Pasted image 20251025155836.png",
-    "Pasted image 20251025155759.png",
-    "Cosas_Personales",
-    "TryHackme/Offensive Security Intro.md",
-    "Data engineering/Data Engineering on AWS.md",
-    "TryHackme",
-    "Trading",
-    "Python/advanced_python/Intro to POO.md",
-    "Python",
-    "linux/03 System administration.md",
-    "algorithms/Level_easy/02 Algoritmo de subcadena.md",
-    "n8n/n8n.md",
-    "C/Intro to C.md",
+    "6 - Main Notes/Python/Intro/Intro python.md",
+    "6 - Main Notes/Python/advanced_python/Intro to POO.md",
+    "5 - Templates/Full Note.md",
+    "6 - Main Notes/Python/Intro",
+    "nueva nota.md",
+    "Computer Science/Computer Science Resources.md",
+    "algorithms/Grokking_Algotihms/Ejercicios grokkie algorithms.md",
+    "6 - Main Notes",
+    "5 - Templates",
+    "4 - Indexes",
+    "3 - Tags",
+    "2 - Source Material/Videos",
+    "2 - Source Material/Podcast",
+    "2 - Source Material/Papers",
+    "2 - Source Material/Other",
+    "2 - Source Material/Books",
     "algorithms/Level_easy/01 Algoritmo de búsqueda Secuencial.md",
-    "Pasted image 20250805095955.png",
-    "algorithms/Level_easy",
-    "algorithms",
-    "Pasted image 20250728165647.png",
-    "Pasted image 20250728165621.png",
-    "Pasted image 20250728165522.png",
-    "Pasted image 20250728165243.png",
-    "Pasted image 20250728165135.png",
-    "Pasted image 20250728164924.png",
-    "Pasted image 20250728164441.png",
-    "web dev/html&css/HTML.md",
-    "web dev/html&css",
-    "web dev",
-    "Python/advanced_python",
-    "linux/02 Linux fundamentals.md",
-    "Untitled.md",
+    "algorithms/Level_easy/02 Algoritmo de subcadena.md",
     "Roadmaps/Roadmap_Python_tryhard.md",
-    "Roadmaps/Roadmap_Python.md",
-    "Roadmaps/Roadmap_Pentesting.md",
-    "English/English Roadmap.md",
-    "ArchLinux/Arch config.md",
-    "python/Fluent python.md",
-    "js_world/js/Foundations js.md",
+    "Offsec/04 Introduction to Web Application Attacks.md",
+    "Pasted image 20251201204723.png",
+    "Pasted image 20251201204541.png",
+    "Pasted image 20251201204524.png",
+    "linux/Intro.md",
+    "linux/03 System administration.md",
+    "linux/02 Linux fundamentals.md",
     "linux/01 System access and file system.md",
-    "n8n/Important Links.md",
-    "English",
+    "Productivity/Angela Yu's Productivity Course.md",
+    "Pasted image 20251124092917.png",
+    "Pasted image 20251124092536.png",
+    "Pasted image 20251124091614.png",
+    "Pasted image 20251124091528.png",
+    "Pasted image 20251124091354.png",
+    "Pasted image 20251124091316.png",
+    "project_epin/Ideas.md",
+    "Pasted image 20251117185101.png",
+    "Offsec/02 Information Gathering.md",
+    "Offsec/01 Report Writing for Penetration Testers.md",
+    "Offsec/02 - OSINT Commands.md",
+    "Data engineering/Data Engineering on AWS.md",
+    "web dev/html&css/HTML.md",
+    "Computer Science/CS50-Harvard/Class 1.md",
+    "Offsec/03 Vulnerability Scanning.md",
+    "Cosas_Personales/Dinero.md",
+    "TryHackme/Offensive Security Intro.md",
+    "n8n/n8n.md",
     "Untitled.canvas"
   ]
 }
