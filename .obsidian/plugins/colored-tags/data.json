@@ -10,11 +10,13 @@
     "highTextContrast": false
   },
   "knownTags": {
+    "adult": 1,
     "ai": 47,
     "algorithms": 87,
     "api": 38,
     "baby": 88,
     "c": 80,
+    "child": 89,
     "cibersecurity": 84,
     "coding": 17,
     "commands": 85,
