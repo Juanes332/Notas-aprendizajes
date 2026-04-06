@@ -12,7 +12,7 @@
   "knownTags": {
     "adult": 1,
     "ai": 47,
-    "algorithms": 87,
+    "algorithms": 48,
     "api": 38,
     "baby": 88,
     "c": 80,
@@ -31,8 +31,8 @@
     "operating_sistem": 93,
     "personal": 91,
     "productivity": 92,
-    "programming": 88,
-    "python": 89
+    "programming": 94,
+    "python": 95
   },
   "tagColors": {},
   "_version": 4
