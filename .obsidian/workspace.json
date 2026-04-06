@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AWS Cloud Practitioner/01 IAM.md",
+                "file": "6 - Main Notes/ArchLinux/02 Configuración de entorno.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01 IAM"
+              "title": "02 Configuración de entorno"
+            }
+          },
+          {
+            "id": "d78f0db5ec3a21b4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Python/Intro/Intro python.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Intro python"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -54,7 +69,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#child",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -163,13 +178,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Success in AI Age/4 - How to use ai to automate life/How to use AI to Automate life.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of How to use AI to Automate life"
+              "title": "Outline"
             }
           },
           {
@@ -210,8 +224,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "calendar"
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           }
         ]
@@ -241,24 +255,33 @@
       "smart-random-note:Open Random Note from Search": false
     }
   },
-  "active": "50ff24675bf89e1e",
+  "active": "d78f0db5ec3a21b4",
   "lastOpenFiles": [
-    "2 - Source Material/Images/Pasted image 20260328185419.png",
-    "2 - Source Material/Images/Pasted image 20260329165403.png",
-    "AWS Cloud Practitioner/01 IAM.md",
-    "2 - Source Material/Images/Pasted image 20250429150322.png",
-    "2 - Source Material/Images/Pasted image 20250429150317.png",
-    "2 - Source Material/Images/Pasted image 20250722112902.png",
-    "2 - Source Material/Images/Pasted image 20251201204524.png",
-    "2 - Source Material/Images/Pasted image 20251201204723.png",
-    "2 - Source Material/Images/Pasted image 20260217215843.png",
+    "6 - Main Notes/Python/Intro/Intro python.md",
+    "6 - Main Notes/ArchLinux/Arch config.md",
+    "6 - Main Notes/ArchLinux/01 Porque Arch.md",
+    "2 - Source Material/Images/Pasted image 20260402183733.png",
+    "6 - Main Notes/ArchLinux/02 Configuración de entorno.md",
+    "6 - Main Notes/ArchLinux/04 Gestores de paquetes en arch.md",
+    "6 - Main Notes/ArchLinux/03 Personalización visual y ajuste de configuraciones.md",
+    "2 - Source Material/Images/Pasted image 20260402205651.png",
+    "2 - Source Material/Images/Pasted image 20260402205639.png",
+    "2 - Source Material/Images/Pasted image 20260402205449.png",
+    "2 - Source Material/Images/Pasted image 20260402201732.png",
+    "2 - Source Material/Images/Pasted image 20260402201202.png",
+    "2 - Source Material/Images/Pasted image 20260402200953.png",
+    "2 - Source Material/Images/Pasted image 20260402192018.png",
+    "2 - Source Material/Images/Pasted image 20260402192006.png",
+    "2 - Source Material/Images/Pasted image 20260402191951.png",
     "1 - Rough Notes/Aws Cloud Practitioner.md",
-    "2 - Source Material/Images/Pasted image 20260329165546.png",
-    "6 - Main Notes/Pasted image 20260329165516.png",
-    "2 - Source Material/Images/Pasted image 20260329164714.png",
+    "1 - Rough Notes/Untitled.md",
+    "1 - Rough Notes/Succeed int the Age Of AI.md",
+    "3 - Tags/Arch.md",
+    "linux/Intro.md",
+    "Arch",
+    "AWS Cloud Practitioner/01 IAM.md",
     "AWS Cloud Practitioner/00 What is Cloud Computing.md",
     "Success in AI Age/1 - How works LLMs/Machine Learning.md",
-    "1 - Rough Notes/Succeed int the Age Of AI.md",
     "AWS Cloud Practitioner",
     "3 - Tags/Cloud.md",
     "3 - Tags/AWS.md",
@@ -274,21 +297,12 @@
     "Success in AI Age/3 - How to use ai to succeed at work/How To Use AI to succeed at work.md",
     "Success in AI Age/4 - How to use ai to automate life",
     "Success in AI Age/3 - How to use ai to succeed at work",
-    "Success in AI Age/2 - AI for accelerated Learning/How to Use AI for Accelerated Learning.md",
     "Success in AI Age/2 - AI for accelerated Learning",
-    "3 - Tags/Learning.md",
-    "Success in AI Age/1 - How works LLMs/Deep Learning.md",
-    "Success in AI Age/1 - How works LLMs/LLMs.md",
     "Success in AI Age/1 - How works LLMs",
-    "Success in AI Age/1 - How works LLMs/Reinforcement Learning.md",
-    "Success in AI Age/1 - How works LLMs/Supervised & Unsupervised Learning.md",
-    "5 - Templates/Full Note.md",
-    "Success in AI Age/Unsupervised Learning.md",
     "Supervised",
     "Success in AI Age",
     "2 - Source Material/PDF's/bash-redirections-cheat-sheet.pdf",
     "2 - Source Material/Images",
-    "2 - Source Material/PDF's/Prompt+Engineering+-+The+Complete+Guide.pdf",
     "Untitled.canvas"
   ]
 }
