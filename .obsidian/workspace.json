@@ -4,39 +4,38 @@
     "type": "split",
     "children": [
       {
-        "id": "4867d18849674343",
+        "id": "503081e14b268935",
         "type": "tabs",
         "children": [
           {
-            "id": "50ff24675bf89e1e",
+            "id": "1bdcc9a8ee539382",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/ArchLinux/02 Configuración de entorno.md",
+                "file": "6 - Main Notes/Python/Intro/01-Intro-python.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02 Configuración de entorno"
+              "title": "01-Intro-python"
             }
           },
           {
-            "id": "d78f0db5ec3a21b4",
+            "id": "c56c55ce86c6d4ef",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Python/Intro/Intro python.md",
+                "file": "6 - Main Notes/Python/Intermediate_Python/01-POO-CleanCode-DRY.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Intro python"
+              "title": "01-POO-CleanCode-DRY"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -69,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#child",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -178,12 +177,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "6 - Main Notes/Python/Intro/01-Intro-python.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 01-Intro-python"
             }
           },
           {
@@ -224,16 +224,15 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "calendar"
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 371.5,
-    "collapsed": true
+    "width": 371.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -255,15 +254,35 @@
       "smart-random-note:Open Random Note from Search": false
     }
   },
-  "active": "d78f0db5ec3a21b4",
+  "active": "1bdcc9a8ee539382",
   "lastOpenFiles": [
-    "6 - Main Notes/Python/Intro/Intro python.md",
-    "6 - Main Notes/ArchLinux/Arch config.md",
-    "6 - Main Notes/ArchLinux/01 Porque Arch.md",
-    "2 - Source Material/Images/Pasted image 20260402183733.png",
+    "6 - Main Notes/Python/Intro/02-Colecciones y estructuras de datos en python.md",
+    "6 - Main Notes/Python/Intro/01-Intro-python.md",
+    "6 - Main Notes/Python/Intermediate_Python/06-POO-Polymorphism.md",
+    "6 - Main Notes/Python/Intermediate_Python/05-POO-Inheritance.md",
+    "6 - Main Notes/Python/Intermediate_Python/04-POO-Abstraction.md",
+    "6 - Main Notes/Python/Intermediate_Python/03-POO-Encapsulation.md",
+    "6 - Main Notes/Python/Intermediate_Python/02-POO-Classes.md",
+    "6 - Main Notes/Python/Intermediate_Python/01-POO-CleanCode-DRY.md",
+    "6 - Main Notes/Python/Intermediate_Python/00-POO-PYTHON.md",
+    "POO-PYTHON.md",
+    "POO-Polymorphism.md",
+    "POO-Inheritance.md",
+    "POO-Abstraction.md",
+    "POO-Encapsulation.md",
+    "POO-Classes.md",
+    "3 - Tags/poo.md",
+    "6 - Main Notes/Python/Intermediate_Python/Intro to POO.md",
+    "3 - Tags/python.md",
+    "3 - Tags/dry.md",
+    "3 - Tags/clean-code.md",
+    "POO-CleanCode-DRY.md",
+    "DICCIONARIOS-PYTHON.md",
+    "CONJUNTOS-PYTHON.md",
+    "TUPLAS-PYTHON.md",
+    "LISTAS-PYTHON.md",
     "6 - Main Notes/ArchLinux/02 Configuración de entorno.md",
-    "6 - Main Notes/ArchLinux/04 Gestores de paquetes en arch.md",
-    "6 - Main Notes/ArchLinux/03 Personalización visual y ajuste de configuraciones.md",
+    "2 - Source Material/Images/Pasted image 20260402183733.png",
     "2 - Source Material/Images/Pasted image 20260402205651.png",
     "2 - Source Material/Images/Pasted image 20260402205639.png",
     "2 - Source Material/Images/Pasted image 20260402205449.png",
@@ -273,28 +292,8 @@
     "2 - Source Material/Images/Pasted image 20260402192018.png",
     "2 - Source Material/Images/Pasted image 20260402192006.png",
     "2 - Source Material/Images/Pasted image 20260402191951.png",
-    "1 - Rough Notes/Aws Cloud Practitioner.md",
-    "1 - Rough Notes/Untitled.md",
-    "1 - Rough Notes/Succeed int the Age Of AI.md",
-    "3 - Tags/Arch.md",
-    "linux/Intro.md",
     "Arch",
-    "AWS Cloud Practitioner/01 IAM.md",
-    "AWS Cloud Practitioner/00 What is Cloud Computing.md",
-    "Success in AI Age/1 - How works LLMs/Machine Learning.md",
     "AWS Cloud Practitioner",
-    "3 - Tags/Cloud.md",
-    "3 - Tags/AWS.md",
-    "3 - Tags/English.md",
-    "project_epin/Ideas.md",
-    "Productivity/Angela Yu's Productivity Course.md",
-    "n8n/Important Links.md",
-    "C/Guia de aprendizaje.md",
-    "C/Intro to C.md",
-    "Progr.md",
-    "Success in AI Age/4 - How to use ai to automate life/How to use AI to Automate life.md",
-    "Roadmap_Python_tryhard.md",
-    "Success in AI Age/3 - How to use ai to succeed at work/How To Use AI to succeed at work.md",
     "Success in AI Age/4 - How to use ai to automate life",
     "Success in AI Age/3 - How to use ai to succeed at work",
     "Success in AI Age/2 - AI for accelerated Learning",

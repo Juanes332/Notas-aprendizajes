@@ -3,7 +3,7 @@
 
 status: #Adult 
 
-tags: #Python #coding 
+tags: [[python]] [[Coding]]
 
 
 # Intro Python 
